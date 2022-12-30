@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --f16: 16px; /*paragraph tag, */
+    --f20: 20px; /*  anchor tag */
+    --f36: 36px; /* h2 tag , content padd top */
+    --f50: 50px; /* h1 tag*/
+    --f100: 100px; /* section spacing */
+}
+/* main{
+    position: relative;
+} */
+body{
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* utility classes */
+ul{
+    margin: 0 !important;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+a{
+    text-decoration: none;
+    font-size: var(--f20);
+}
+h1,h2{
+    font-weight: 700;
+}
+mark{
+    background: transparent;
+    color: lightskyblue;
+}
+hr{
+    width: 20%;
+    display: inline;
+}
+h2 {
+    letter-spacing: 3px;
+    font-size: var(--f36);
+    text-align: center;
+    word-spacing: 10px;
+}
+h3{
+    font-size: var(--f36);
+    padding-bottom: var(--f20) ;
+}
+p{
+    font-size: var(--f16);
+}
+.hr_special{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+section{
+    padding-top: var(--f50);
+}
+
+
+/* Header */
+header#home nav{
+    padding: 0 0 30px;
+    display: flex;
+    align-items: center;
+}
+.header_menu{
+    justify-content: center;
+}
+.header_menu a{
+    color: black;
+    transition: opacity 1s ease-in-out;
+}
+.header_menu a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+header#home nav button{
+    display: none;
+    background: transparent;
+    border: none;
+}
+header#home nav button i{
+    color: black;
+}
+.social-contact{
+    gap: 30px;
+    justify-content: flex-end;
+}
+
+/* About */
+#about_us p{
+    text-align: justify;
+}
+.about_content{
+    padding-top: var(--f36);
+}
+#about_us .about_content p{
+    text-align: left;
+    padding-left: var(--f36);
+}
+
+
+/* Courses */
+.course-carousel img{
+    height: 700px;
+}
+.course-carousel h5,p{
+    font-size: x-large;
+    text-align: center;
+}
+.course_content{
+    padding-top: var(--f36);
+}
+#courses .course_content p{
+    text-align: left;
+    padding-left: var(--f36);
+}
+#courses hr{
+    width: 28%;
+}
+
+/* Tutorials */
+#tutorials .tut_video{
+    text-align: center;
+}
+iframe{
+    border-radius: 10px;
+    width: 50%;
+    height: 500px;
+}
+
+/* Contact Us */
+#contact_us .inquiry_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: var(--f16) 0;
+}
+
+input,textarea{
+    width: 40%;
+    padding:var(--f16) 0 ;
+    border-radius: 5px;
+    border-color: lightgray;
+}
+button{
+    padding: 16px;
+    font-size: var(--f16);
+    width: 145px;
+    background: #3390ff;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: white;
+    border-color: #3390ff;
+}
+
+/* Footer */
+footer{
+    padding: var(--f36) 0 var(--f16);
+    background-color: black;
+    color: white;
+}
+.getin_touch{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.getin_touch span i{
+    min-width: 50px;
+}
+.getin_touch a{
+    color: white;
+    transition: opacity 2s ease-in-out;
+    font-size: var(--f20);
+}
+.getin_touch a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+
+/* Canvas */
+.canvas{
+    display: none;
+}
+.canvas-content{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.canvas-content ul.header_menu{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+.canvas-content ul.social-contact{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width:992px) {
+    :root{
+        --f36:26px !important;
+    }
+    main{
+        overflow-x: hidden;
+    }
+    header#home nav{
+        justify-content: space-between;
+    }
+    header#home nav ul{
+        display: none;
+        
+    }
+    header#home nav button{
+        display: block;
+    }
+    section#about_us{
+        padding-top: 0;
+    }
+    .canvas{
+        width: 70%;
+        display: block;
+    }
+    iframe {
+        border-radius: 10px;
+        width: 70%;
+        height: 310px;
+    }
+}
+@media  screen and (max-width:768px) {
+    header#home nav{
+        padding: 0;
+    }
+    section#about_us{
+        padding-top: 0;
+    }
+
+    p{
+        font-size: 16px !important;
+    }
+    input,textarea{
+        width: 60%;
+    }
+    .course-carousel img{
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:576px){
+    #about_us p{
+        text-align: left;
+        padding-left: 30px;
+    }
+    h2{
+        letter-spacing: 0px;
+        font-size: 20px;
+    }
+    .getin_touch a {
+        color: white;
+        transition: opacity 2s ease-in-out;
+        font-size: 13px;
+    }
+    .course-carousel img{
+        height: 350px;
+    }
+}
+@media screen and (max-width:350px) {
+    h2{
+        font-size: 16px;
+    }
+    .course-carousel img{
+        height: 300px;
+    }
+    iframe {
+        border-radius: 10px;
+        width: 70%;
+        height: 250px;
+    }
+    input,textarea{
+        width: 75%;
+    }
+    .getin_touch a {
+        color: white;
+        transition: opacity 2s ease-in-out;
+        font-size: 10px;
+    }
+}
